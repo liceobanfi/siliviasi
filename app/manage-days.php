@@ -2,8 +2,13 @@
 
 $config = require 'config/config.php';
 require_once 'classes/connectDb.php';
+require_once 'classes/SessionManager.php';
 
-//TODO: questa pagina deve aggiungere o rimuovere i giorni che riceve tramite get
+$session = new SessionManager();
+echo $_SESSION['mail'];
+
+
+//TODO: questa pagina deve aggiungere o rimuovere i giorni che riceve tramite post
 
 
 

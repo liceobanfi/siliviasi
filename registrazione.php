@@ -2,7 +2,8 @@
 
 $config = require 'app/config/config.php';
 $days = require 'app/config/days-config.php';
-require_once 'app/classes/connectDb.php';
+require_once 'app/classes/ConnectDb.php';
+require_once 'app/classes/SessionManager.php';
 
 //validates received output, and redirects to the login if something fails
 $error = 0;
@@ -18,6 +19,11 @@ if($error === 0)
   $docente = filter_var(htmlSpecialChars($_GET['docente']), FILTER_SANITIZE_STRING);
   $mail = filter_var($_GET['mail'], FILTER_SANITIZE_EMAIL);
   $telefono = filter_var(htmlSpecialChars($_GET['telefono']), FILTER_SANITIZE_STRING);
+
+  //store the mail in a session variable
+  $session = new SessionManager();
+  $_SESSION['mail'] = $mail;
+
 }else
 {
   header("Location: index.php?error=1");
@@ -46,11 +52,11 @@ while ($row = $stmt->fetch()) {
 
 if($regTableLength === 0)
 {
-  $registrazioni = "<p>nono hai ancora registrato nessun giorno</p>";
+  $registrazioni = "<p>non hai ancora registrato nessun giorno</p>";
 }else
 {
   $registrazioni =
-"<table>
+"<table id=\"js-registered-table\">
 <tr>
   <th> giorno </th>
   <th> orario </th>
@@ -77,8 +83,9 @@ foreach($daysInfo as $day => $hours)
   foreach($hours as $hour => $taken)
   {
     $class = $taken ? "taken" : "free";
+    $button = $taken ? "<button>prenota</button>" : "";
     $tabellaGiorni .=
-    "<a class=\"$class\">$hour<button>prenota</button></a>";
+    "<div class=\"$class\"><span>$hour</span> $button</div><br>";
   }
   $tabellaGiorni .= "</div>";
 }
@@ -91,8 +98,8 @@ foreach($daysInfo as $day => $hours)
     <title>open day</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script async type="text/javascript" src="./js/main.js" ></script>
-    <link rel="stylesheet" href="./css/styl.css" >
+    <script async type="text/javascript" src="./js/registrazione.js" ></script>
+    <link rel="stylesheet" href="./css/registrazione.css" >
   </head>
   <body>
     <button id="js-back">indietro</button>
@@ -100,7 +107,7 @@ foreach($daysInfo as $day => $hours)
       <h1>le tue registrazioni</h1>
 <?php echo $registrazioni; ?>
     </div>
-    <div class="days-table-wrapper">
+    <div class="days-table-wrapper" id="js-registrable-days">
       <h1>seleziona una data</h1>
 <?php echo $tabellaGiorni ?>
     </div>
