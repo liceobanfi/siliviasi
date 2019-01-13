@@ -20,7 +20,7 @@ class ConnectDb {
    * private constructor where the database connection is estabilished.
    */
   private function __construct() {
-    $config = require '../config/config.php';
+    global $config;
 
     $dsn = "mysql:host={$config['dbHost']};dbname={$config['dbName']}";
 

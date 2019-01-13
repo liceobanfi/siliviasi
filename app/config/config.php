@@ -11,7 +11,7 @@
 return array(
   //DATABASE CONFIGURATION
   'dbHost' => 'localhost',
-  'dbName' => 'banfidb',
+  'dbName' => 'silviasi_db',
   'dbUsername' => 'root',
   'dbPassword' => '',
   //MAIL CONFIGURATION
