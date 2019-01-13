@@ -7,7 +7,7 @@ require_once 'app/classes/connectDb.php';
 //validates received output, and redirects to the login if something fails
 $error = 0;
 $error += !(isset($_GET['scuola']) && strlen($_GET['scuola']) < 150 );
-$error += !(isset($_GET['citta']) && strlen($_GET['citta']) < 150 );
+$error += !(isset($_GET['citta']) && strlen($_GET['citta']) < 30 );
 $error += !(isset($_GET['docente']) && strlen($_GET['docente']) < 150 );
 $error += !(isset($_GET['mail']) && filter_var($_GET['mail'], FILTER_VALIDATE_EMAIL) && strlen($_GET['mail']) < 254 );
 $error += !(isset($_GET['telefono']) && strlen($_GET['telefono']) < 30 );
@@ -61,7 +61,7 @@ if($regTableLength === 0)
 
 $daysInfo = $days;
 //set to false the hours that are already registered in the database
-$stmt = $pdo->query('SELECT giorno, orario FROM iscrizione');
+$stmt = $pdo->query('SELECT giorno, orario FROM iscrizione limit 200');
 while ($row = $stmt->fetch())
 {
   $daysInfo[$row['giorno']][$row['orario']] = false;
@@ -101,7 +101,7 @@ foreach($daysInfo as $day => $hours)
 <?php echo $registrazioni; ?>
     </div>
     <div class="days-table-wrapper">
-      <h1>selezionare una data</h1>
+      <h1>seleziona una data</h1>
 <?php echo $tabellaGiorni ?>
     </div>
   </body>

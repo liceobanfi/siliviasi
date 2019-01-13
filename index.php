@@ -9,38 +9,36 @@
     <link rel="stylesheet" href="./css/styl.css" >
   </head>
   <body>
-    <div id="form_scuola" class="fl div_testo1">
-	<h2>Inserire i tuoi dati:</h2>
-	<form id="registration-form" >
-	<div>
-	<span style="color:red">(*)</span> Scuola:<br/><input name="scuola" />
-	</div>
-	<div>
-	<span style="color:red">(*)</span> Città:<br/><input name="citta" />
-	</div>
-	<div>
-	<span style="color:red">(*)</span> Docente<br/><input name="docente" />
-	</div>
-	<div>
-	<span style="color:red">(*)</span> e-mail:<br/><input name="mail" />
-	</div>
-	<div>
-	<span style="color:red">(*)</span> Recapito telefonico:<br/><input name="telefono" />
-	</div>
-
-<!--
-        <div>
-	<span style="color:red">(*)</span> Informazioni aggiuntive:<br/>
-        <textarea name="info" rows="4" cols="50"> </textarea>
-	</div>
--->
-	<div><i><span style="color:red">(*)</span> = campi obbligatori</i></div>
-	<div><br />
-	</div>
-	</form>
-  <button name="registrati" id="registrati">avanti</button>
-</div>
-  </div>
+    <div class="form-wrapper">
+      <h2>Inserire i tuoi dati:</h2>
+      <form id="js-registration-form" >
+      <div>
+      <span style="color:red">(*)</span> Scuola:<br/><input name="scuola" />
+      </div>
+      <div>
+      <span style="color:red">(*)</span> Città:<br/><input name="citta" />
+      </div>
+      <div>
+      <span style="color:red">(*)</span> Docente<br/><input name="docente" />
+      </div>
+      <div>
+      <span style="color:red">(*)</span> e-mail:<br/><input name="mail" />
+      </div>
+      <div>
+      <span style="color:red">(*)</span> Recapito telefonico:<br/><input name="telefono" />
+      </div>
+    <!--
+            <div>
+      <span style="color:red">(*)</span> Informazioni aggiuntive:<br/>
+            <textarea name="info" rows="4" cols="50"> </textarea>
+      </div>
+    -->
+      <div><i><span style="color:red">(*)</span> = campi obbligatori</i></div>
+      <div><br />
+      </div>
+      </form>
+      <button id="js-registrati">avanti</button>
+    </div>
 
   </body>
 </html>

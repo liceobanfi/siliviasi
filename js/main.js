@@ -12,7 +12,7 @@ $(document).ready( function()
     return true;
   }
 
-  $("#registrati").click(
+  $("#js-registrati").click(
   function()
   {
     if(!validateForm())
@@ -21,7 +21,7 @@ $(document).ready( function()
     } else
     {
       window.location.href = 'registrazione.php?'+
-        $("#registration-form").serialize();
+        $("#js-registration-form").serialize();
     }
   }
   );
