@@ -23,27 +23,39 @@ if($error === 0)
   die();
 }
 
+//create db connection
 $instance = ConnectDb::getInstance();
 $pdo = $instance->getConnection();
 
-/* $stmt = $pdo->prepare('SELECT * FROM iscrizione WHERE mail = :mail '); */
-/* $stmt->execute(['mail' => $_POST['mail']]); */
+//get registered days
+$stmt = $pdo->prepare('SELECT * FROM iscrizione WHERE mail = :mail ');
+$stmt->execute(['mail' => $mail]);
 
-/* $query = "select * from iscrizione WHERE mail = 'rossi@gmail.com'"; */
-/* $stmt = $pdo->query($query); */
+$regTableHtml = "";
+$regTableLength = 0;
+while ($row = $stmt->fetch()) {
+  $regTableLength++;
+  $regTableHtml .=
+"<tr>
+  <td>" . $row['giorno'] . "</td>
+  <td>" . $row['orario'] . "</td>
+  <td> <button>cancella</button></td>
+<tr>";
+}
 
-/* $output = array(); */
+if($regTableLength === 0)
+{
+  $registrazioni = "<p>nono hai ancora registrato nessun giorno</p>";
+}else
+{
+  $registrazioni = "<table>
+<tr>
+  <th> giorno </th>
+  <th> orario </th>
+  <th> opzioni </th>
+</tr>". $regTableHtml . "</table>";
+}
 
-/* while ($row = $stmt->fetch()) { */
-/*   $output[] = [ */
-/*     'giorno' => $row['giorno'], */
-/*     'orario' => $row['orario'] */
-/*    ]; */
-/* } */
-
-//TODO: fare che questa variabile contenga i dati ottenuti dalla query per ottenere le registrazioni
-//oppure la scritta -nessun giorno registrato- se non è stato trovato niente
-$registrazioni = "<p>nono hai ancora registrato nessun giorno</p>";
 //TODO: fare che questa varaiblie contenga tutti i giorni disponibili in una bella tabella html
 $tabellaGiorni = "";
 

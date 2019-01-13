@@ -18,7 +18,6 @@ $(document).ready( function()
       alert("completare tutti i campi");
     } else
     {
-      console.log($("#registration-form").serialize())
       window.location.href = 'registrazione.php?'+
         $("#registration-form").serialize();
     }
