@@ -13,16 +13,13 @@ $pdo = $instance->getConnection();
 $query = "select * from iscrizione WHERE mail = 'rossi@gmail.com'";
 $stmt = $pdo->query($query);
 
-$gg = array();
-$or = array();
+$output = array();
 
-$result = [];
 while ($row = $stmt->fetch()) {
-  $gg[] = $row['giorno'];
-  $or[] = $row['orario'];
+  $output[] = [
+    'giorno' => $row['giorno'],
+    'orario' => $row['orario']
+   ];
 }
 
-echo json_encode(
-  ['giorno'=>$gg,
-  'orario' => $or
-]);
+echo json_encode($output);

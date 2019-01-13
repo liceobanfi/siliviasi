@@ -11,7 +11,7 @@
   <body>
     <div id="form_scuola" class="fl div_testo1">
 	<h2>Inserire i tuoi dati:</h2>
-	<form id="registration-form">
+	<form id="registration-form" >
 	<div>
 	<span style="color:red">(*)</span> Scuola:<br/><input name="scuola" />
 	</div>
@@ -38,11 +38,8 @@
 	<div><br />
 	</div>
 	</form>
-  <button name="registrati" id="registrati">registrati!</button>
+  <button name="registrati" id="registrati">avanti</button>
 </div>
-  <div id="area-prenotazioni">
-  <h1>le tue prenotazioni</h1>
-  <div id="display-prenotazioni" ></div>
   </div>
 
   </body>

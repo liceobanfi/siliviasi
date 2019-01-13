@@ -10,17 +10,6 @@ $(document).ready( function()
     return true;
   }
 
-  function displayData(data)
-  {
-    var receivedData = JSON.parse(data);
-    console.log(receivedData)
-    var htmlOutput = "";
-    for(var i=0; i<receivedData.giorno.length; i++){
-      htmlOutput += '<p>giorno: '+receivedData.giorno[i]+ " orario: "+ receivedData.orario[i] + "</p>";
-    }
-    $('#display-prenotazioni').html(htmlOutput);
-  }
-    
   $("#registrati").click(
   function()
   {
@@ -30,13 +19,8 @@ $(document).ready( function()
     } else
     {
       console.log($("#registration-form").serialize())
-      $.ajax({
-        type: "POST",
-        url: 'app/get-user-data.php',
-        data: $("#registration-form").serialize(),
-        success: displayData,
-        // dataType: dataType
-      });
+      window.location.href = 'registrazione.php?'+
+        $("#registration-form").serialize();
     }
   }
   );
