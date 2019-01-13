@@ -1,6 +1,7 @@
 <?php
 
 $config = require 'app/config/config.php';
+$days = require 'app/config/days-config.php';
 require_once 'app/classes/connectDb.php';
 
 //validates received output, and redirects to the login if something fails
@@ -48,7 +49,8 @@ if($regTableLength === 0)
   $registrazioni = "<p>nono hai ancora registrato nessun giorno</p>";
 }else
 {
-  $registrazioni = "<table>
+  $registrazioni =
+"<table>
 <tr>
   <th> giorno </th>
   <th> orario </th>
@@ -56,8 +58,30 @@ if($regTableLength === 0)
 </tr>". $regTableHtml . "</table>";
 }
 
-//TODO: fare che questa varaiblie contenga tutti i giorni disponibili in una bella tabella html
+
+$daysInfo = $days;
+//set to false the hours that are already registered in the database
+$stmt = $pdo->query('SELECT giorno, orario FROM iscrizione');
+while ($row = $stmt->fetch())
+{
+  $daysInfo[$row['giorno']][$row['orario']] = false;
+}
+
+//create the html to display the days
 $tabellaGiorni = "";
+foreach($daysInfo as $day => $hours)
+{
+  $tabellaGiorni .= 
+    "<button>" . $day . "</button>
+     <div class=\"hidden\">";
+  foreach($hours as $hour => $taken)
+  {
+    $class = $taken ? "taken" : "free";
+    $tabellaGiorni .=
+    "<a class=\"$class\">$hour<button>prenota</button></a>";
+  }
+  $tabellaGiorni .= "</div>";
+}
 
 ?>
 <!DOCTYPE html>
@@ -71,6 +95,7 @@ $tabellaGiorni = "";
     <link rel="stylesheet" href="./css/styl.css" >
   </head>
   <body>
+    <button id="js-back">indietro</button>
     <div class="user-table-wrapper">
       <h1>le tue registrazioni</h1>
 <?php echo $registrazioni; ?>

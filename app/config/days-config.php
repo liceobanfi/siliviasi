@@ -8,47 +8,20 @@
  *
  */
 return [
-  'scienzeApplicate' => [
-    ['08 dicembre 2018', 20],
-    ['09 dicembre 2018', 20],
-    ['10 dicembre 2018', 15],
-    ['11 dicembre 2018', 15],
-    ['12 dicembre 2018', 15],
-    ['13 dicembre 2018', 15],
-    ['22 dicembre 2018', 20],
-    ['23 dicembre 2018', 15],
-    ['24 dicembre 2018', 20],
-    ['25 dicembre 2018', 15],
-    ['26 dicembre 2018', 15],
-    ['27 dicembre 2018', 15]
+  '01 febbraio 2019' => [
+    "8 - 8.4" => true,
+    "8.4 - 9" => true,
+    "9 - 9.4" => true
   ],
-  'scientifico' => [
-    ['08 dicembre 2018',20],
-    ['09 dicembre 2018',20],
-    ['10 dicembre 2018',15],
-    ['11 dicembre 2018',15],
-    ['12 dicembre 2018',15],
-    ['13 dicembre 2018',15],
-    ['22 dicembre 2018',20],
-    ['23 dicembre 2018',15],
-    ['24 dicembre 2018',20],
-    ['25 dicembre 2018',15],
-    ['26 dicembre 2018',15],
-    ['27 dicembre 2018',15]
+  '02 febbraio 2019' => [
+    "8 - 8.4" => true,
+    "8.4 - 9" => true,
+    "9 - 9.4" => true
   ],
-  'classico' => [
-    ['08 dicembre 2018',6],
-    ['09 dicembre 2018',6],
-    ['10 dicembre 2018',6],
-    ['11 dicembre 2018',6],
-    ['12 dicembre 2018',6],
-    ['13 dicembre 2018',6],
-    ['22 dicembre 2018',6],
-    ['23 dicembre 2018',6],
-    ['24 dicembre 2018',6],
-    ['25 dicembre 2018',6],
-    ['26 dicembre 2018',6],
-    ['27 dicembre 2018',6]
+  '03 febbraio 2019' => [
+    "8 - 8.4" => true,
+    "8.4 - 9" => true,
+    "9 - 9.4" => true
   ]
 ];
 
