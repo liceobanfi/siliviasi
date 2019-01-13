@@ -1,0 +1,167 @@
+/*mobile-base (contain the first version of all the css contents. if the user device is not a phone the css version for his device will be downloaded)*/
+/* @import url("http://fonts.googleapis.com/css?family=Raleway:400,400italic,700,800"); */
+
+body{
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+background-image:url("../images/bg1.jpg");
+background-position:center 1px;
+background-repeat:no-repeat;
+  margin:0px;
+}
+
+#header{
+	z-index:1;
+	text-align:center;
+height:100%;
+background-image:url("../images/header_m.png");
+background-position:center;
+background-repeat:no-repeat;
+ background-position: bottom;
+
+	z-inex:999999999;
+}
+#header h1,#header h2{
+	position:relative;
+	margin:0px;
+	padding:0px;
+	    color: #737373;
+	 letter-spacing: 10px;
+	 	font-family: "FontAwesome", "Helvetica", sans-serif;
+    font-weight: 100;
+}
+
+#header h1{
+     top:40%;
+	font-size:50px;
+	
+}
+#header h2{
+     top:50%;
+	font-size:30px;
+}
+
+#header #linebreack{
+		position:relative;
+	     top:46%;
+	color:#737373;
+	  height: 30px; 
+  border-style: solid; 
+border-bottom:2px solid #737373; width: 150px; margin:0 auto;	
+  border-width: 2px 0 0 0; 
+  border-radius: 20px; 
+}
+#header #linebreack:before{
+		color:#737373;
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: #737373; 
+  border-width: 0 0 2px 0; 
+  border-radius: 20px; 
+}
+
+
+#content{
+	z-index:2;
+	padding:10px;
+background-color:#F4ECD8;
+	text-align:center;
+}
+
+#content h1{
+		font-family: "FontAwesome", "Helvetica", sans-serif;
+    font-weight: 100;
+	font-size:40px;
+    color: #737373;
+}
+#content h2{
+		font-family: "FontAwesome", "Helvetica", sans-serif;
+    font-weight: 100;
+	font-size:30px;
+    color: #737373;
+}
+#green{
+ color: #88C100;
+     font-weight: 300;
+}
+p{
+		font-family: "arial","FontAwesome", "Helvetica", sans-serif;
+		color: #000;
+ letter-spacing: 5px;
+}
+
+a{
+font-family: "arial","FontAwesome", "Helvetica", sans-serif;
+cursor: pointer;
+font-size:20px;
+color: #69ADCE;
+text-decoration:none;
+}
+
+ a:hover{
+text-decoration:underline;
+}
+
+hr { 
+margin-top:50px;
+  height: 30px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 1px 0 0 0; 
+  border-radius: 20px; 
+  margin-right:100px;margin-left:100px;
+} 
+hr:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+}
+
+
+#linebreack{
+	color:#737373;
+	  height: 30px; 
+  border-style: solid; 
+border-bottom:2px solid #737373; width: 150px; margin:0 auto;	
+  border-width: 2px 0 0 0; 
+  border-radius: 20px; 
+}
+ #linebreack:before{
+		color:#737373;
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: #737373; 
+  border-width: 0 0 2px 0; 
+  border-radius: 20px; 
+}
+
+#content img{
+border: 1px solid #fff;
+padding:0px;
+width:100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

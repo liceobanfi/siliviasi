@@ -1,0 +1,200 @@
+/*mobile-base (contain the first version of all the css contents. if the user device is not a phone the css version for his device will be downloaded)*/
+@import url("http://fonts.googleapis.com/css?family=Raleway:400,400italic,700,800");
+
+.container{
+text-align:center;
+margin:0;
+background-color:rgba(255,255,255,0.3);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+body{
+  background-image: radial-gradient(circle, #3F9CBA 0%, #153346 100%);
+margin:0;
+}
+
+
+ body{
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg3.jpg") center center no-repeat;
+  background-size: cover;
+   background-attachment: fixed;
+  
+  }
+  body:before {
+    content: '';
+		position: fixed;
+		z-index:-1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-image: linear-gradient(to bottom right,#2eb82e,#2F62B1);
+		opacity: .9; 
+
+  }
+
+
+.header{
+	overflow:hidden;
+background-color:rgb(47, 98, 177);
+text-align:center;
+height:80px;
+margin:0;
+box-shadow: 0 10px 10px -10px #8c8b8b;
+}
+
+
+
+  #topnav{
+top:0px;
+box-shadow: 0px 3px 5px #888888;
+text-align:center;
+
+}
+/*class added to topnav when the page is scrolled*/
+ .fixed {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+  }
+
+.selected{
+background-color:rgb(154, 184, 228);
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+	font-weight:bold;
+	font-family:Arial,'Sun-ExtA','Arial Unicode MS','NSimSun',sans-serif;
+	width:100%;
+}
+
+ul.topnav li {float: left;width:11.11%;}
+
+
+ul.topnav li a, .dropdown-content a {
+  display: inline-block;
+   color: rgb(47, 98, 177);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-size: auto;
+}
+
+ul.topnav li a:hover ,.dropdown-content a:hover{background-color: rgb(47, 98, 177);color:#ffffff;}
+
+
+ul.topnav li.icon {display: none;}
+
+@media screen and (max-width:668px) {
+  ul.topnav li:not(:first-child) {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@media screen and (max-width:668px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* ---------------------------------------------------------------------------
+-------------------------------# page style #------------------------------ */
+
+.content{
+background: #f0f0f0;
+}
+
+ div.header h1 {
+		font-family: "Raleway", "Helvetica", sans-serif;
+    font-size: 30pt;
+    color: #fff;
+  }
+  
+
+hr { 
+  height: 30px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 1px 0 0 0; 
+  border-radius: 20px; 
+  margin-right:100px;margin-left:100px;
+} 
+hr:before { 
+  display: block; 
+  content: ""; 
+  height: 30px; 
+  margin-top: -31px; 
+  border-style: solid; 
+  border-color: #8c8b8b; 
+  border-width: 0 0 1px 0; 
+  border-radius: 20px; 
+}
+
+h1{
+			font-family: "Raleway", "Helvetica", sans-serif;
+}
+h2{
+		font-family: "Raleway", "Helvetica", sans-serif;
+}
+h3{
+		font-family: "Raleway", "Helvetica", sans-serif;
+}
+p{
+		font-family: "Raleway", "Helvetica", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

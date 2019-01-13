@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 105px;
+  background-color: #2a68af;
+  background-size: cover;
+  background-position: center;
+/* background: #457fca;  /1* fallback for old browsers *1/ */
+/* background: -webkit-linear-gradient(to right, #5691c8, #457fca);  /1* Chrome 10-25, Safari 5.1-6 *1/ */
+/* background: linear-gradient(to right, #5691c8, #457fca); /1* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ *1/ */
+  overflow: hidden;
+  background-image: url(qwepng);
+}
+.hero-nav .hero-nav__inner {
+  z-index: 1;
+  text-align: center;
+}
+.hero-nav h1 {
+  color: #efefef;
+  text-transform: uppercase;
+  font-size: 60px;
+}
+.hero-nav h2 {
+  color: #efefef;
+  text-decoration:underline;
+  font-weight: lighter;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.hero-nav:before {
+  content: "";
+  background: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: background 400ms;
+}
+.hero-nav.fixme:before {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.page-content {
+  width: 30em;
+  margin: 0 auto;
+  line-height: 1.625;
+}
+
+
+
+
+/* body { */
+/*   background: #000; */
+/*   display: flex; */
+/*   align-items: center; */
+/*   text-align: center; */
+/*   justify-content: center; */
+/* } */
+
+.button {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 3px;
+  /* font-family: "Open Sans"; */
+  font-weight: lighter;
+  font-size: 14px;
+  display: inline-block;
+  padding: 15px 20px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.2, 1);
+}
+.button:before, .button:after {
+  position: absolute;
+  content: "";
+  display: block;
+}
+.button:before {
+  top: -120px;
+  left: 50px;
+  z-index: -1;
+  width: calc(100% + 140px);
+  height: 100px;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.2, 1);
+  -webkit-transform: skew(70deg);
+          transform: skew(70deg);
+  background: #2a68af;
+  background: rgba(255,255,255,.2);
+  color: #000;
+}
+.button:after {
+  top: 0;
+  left: 0;
+  z-index: -2;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  border: 1px solid #fff;
+}
+.button:hover:before {
+  left: -50px;
+  top: -20px;
+}
+
