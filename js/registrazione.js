@@ -27,7 +27,14 @@ $(document).ready( function()
       }
     });
   });
-  
+
+  /**
+   * toggle days
+   */
+  $("div.days-table-wrapper > button").click( function(){
+    $("div#js-registrable-days > div").hide();
+    $(this).next().show("slow");
+  });
 
   /**
    * makes an api call to register a day
