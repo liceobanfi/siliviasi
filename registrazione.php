@@ -12,23 +12,31 @@ $error += !(isset($_GET['citta']) && strlen($_GET['citta']) < 30 );
 $error += !(isset($_GET['docente']) && strlen($_GET['docente']) < 150 );
 $error += !(isset($_GET['mail']) && filter_var($_GET['mail'], FILTER_VALIDATE_EMAIL) && strlen($_GET['mail']) < 254 );
 $error += !(isset($_GET['telefono']) && strlen($_GET['telefono']) < 30 );
-if($error === 0)
-{
-  $scuola = filter_var(htmlSpecialChars($_GET['scuola']), FILTER_SANITIZE_STRING);
-  $citta = filter_var(htmlSpecialChars($_GET['citta']), FILTER_SANITIZE_STRING);
-  $docente = filter_var(htmlSpecialChars($_GET['docente']), FILTER_SANITIZE_STRING);
-  $mail = filter_var($_GET['mail'], FILTER_SANITIZE_EMAIL);
-  $telefono = filter_var(htmlSpecialChars($_GET['telefono']), FILTER_SANITIZE_STRING);
-
-  //store the mail in a session variable
-  $session = new SessionManager();
-  $_SESSION['mail'] = $mail;
-
-}else
+if($error !== 0)
 {
   header("Location: index.php?error=1");
   die();
 }
+
+$scuola = filter_var(htmlSpecialChars($_GET['scuola']), FILTER_SANITIZE_STRING);
+$citta = filter_var(htmlSpecialChars($_GET['citta']), FILTER_SANITIZE_STRING);
+$docente = filter_var(htmlSpecialChars($_GET['docente']), FILTER_SANITIZE_STRING);
+$mail = filter_var($_GET['mail'], FILTER_SANITIZE_EMAIL);
+$telefono = filter_var(htmlSpecialChars($_GET['telefono']), FILTER_SANITIZE_STRING);
+
+//store the user data in a session variable
+$session = new SessionManager();
+$_SESSION = array_merge($_SESSION, [
+  'scuola' => $scuola,
+  'citta' => $citta,
+  'docente' => $docente,
+  'mail' => $mail,
+  'telefono' => $telefono,
+]);
+$session->setValid();
+echo var_dump($_SESSION);
+echo $_SESSION['mail'];
+
 
 //create db connection
 $instance = ConnectDb::getInstance();
@@ -80,10 +88,10 @@ foreach($daysInfo as $day => $hours)
   $tabellaGiorni .= 
     "<button>" . $day . "</button>
      <div class=\"hidden\">";
-  foreach($hours as $hour => $taken)
+  foreach($hours as $hour => $free)
   {
-    $class = $taken ? "taken" : "free";
-    $button = $taken ? "<button>prenota</button>" : "";
+    $class = $free ? "free" : "taken";
+    $button = $free ? "<button>prenota</button>" : "";
     $tabellaGiorni .=
     "<div class=\"$class\"><span>$hour</span> $button</div><br>";
   }

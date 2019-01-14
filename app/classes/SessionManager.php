@@ -12,10 +12,10 @@
  * $_SESSION['foo'] = 'bar';
  * </code>
  * 
- * this replaces the default session function
+ * using the default php function, the example above can be written as:
  * <code>
  * <?php
- * $session = new SessionManager();
+ * session_start();
  * $_SESSION['foo'] = 'bar';
  * </code>
  */
