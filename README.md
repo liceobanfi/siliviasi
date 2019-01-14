@@ -1,5 +1,6 @@
-# open-day
-A repository for the banfi open day registration website
+# SilviaSi
+A versatile event registration form written in php
+for the liceo banfi SilviaSi exibition
 
 ## contributors
 
