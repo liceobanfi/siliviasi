@@ -107,16 +107,27 @@ foreach($daysInfo as $day => $hours)
     <link rel="stylesheet" href="./css/registrazione.css" >
   </head>
   <body>
-    <div class="container cf">
-    <!-- <a id="js-back">indietro</a> -->
-    <div class="user-table-wrapper">
-      <h2>le tue prenotazioni</h2>
-<?php echo $registrazioni; ?>
-    </div>
-    <div class="days-table-wrapper" id="js-registrable-days">
-      <h2>seleziona una data</h2>
-<?php echo $tabellaGiorni ?>
-    </div>
+    <nav>
+      <ul>
+        <li><a class="active" href="https://www.liceobanfi.gov.it/">home</a></li>
+        <li><a href="http://silviasi.it/">SilviaSi</a></li>
+        <li><a href="informazioni.html">informazioni</a></li>
+      </ul>
+    </nav>
+    <div class="page-wrapper">
+
+      <div class="container cf">
+      <!-- <a id="js-back">indietro</a> -->
+      <div class="user-table-wrapper">
+        <h2>le tue prenotazioni</h2>
+  <?php echo $registrazioni; ?>
+      </div>
+      <div class="days-table-wrapper" id="js-registrable-days">
+        <h2>prenota una data</h2>
+  <?php echo $tabellaGiorni ?>
+      </div>
+      </div>
+
     </div>
   </body>
 </html>

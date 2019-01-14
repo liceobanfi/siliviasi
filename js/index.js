@@ -2,7 +2,7 @@ $(document).ready( function()
 {
   function validateForm()
   {
-    if($("input[name='scuola']").val() === '') return 'il campo scuola è obbligatorio';
+    if($("input[name='scuola']").val() === '') return 'il campo istituto è obbligatorio';
     if($("input[name='citta']").val() === '') return 'il campo città è obbligatorio';
     if($("input[name='docente']").val() === '') return 'il campo docente è obbligatorio';
     var mail = $("input[name='mail']").val();

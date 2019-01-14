@@ -1,4 +1,4 @@
-/* @import url(https://fonts.googleapis.com/css?family=Merriweather); */
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
 *,
 *:before,
 *:after {
@@ -7,14 +7,47 @@
   box-sizing: border-box;
 }
 
+html, body {
+  background: #f1f1f1;
+  font-family: 'Merriweather', sans-serif;
+  padding-top: 0;
+  margin: 0;
+}
+
+/* --- nav bar --- */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2a68af;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  font-family: 'Merriweather', sans-serif;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #327acd;
+}
+
 .hidden{
   display:none;
 }
 
-html, body {
-  background: #f1f1f1;
-  font-family: 'Merriweather', sans-serif;
+.page-wrapper{
   padding: 1em;
+  margin: 8px;
+  margin-top:0;
 }
 
 h1,h2 {
@@ -25,6 +58,8 @@ h1,h2 {
 h2{
   text-align:left;
 }
+
+/* --- user table --- */
 .user-table-wrapper p{
   text-align: left;
   color: #808080;
@@ -64,47 +99,6 @@ table button{
   text-align: center;
   margin: 20px auto;
 }
-form input, form textarea {
-  color: #404040;
-  border: 0;
-  outline: 0;
-  padding: 1em;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  border-radius: 4px;
-  display: block;
-  width: 100%;
-  margin-top: 1em;
-  font-family: 'Merriweather', sans-serif;
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  resize: none;
-}
-form input:focus, form textarea:focus {
-  -moz-box-shadow: 0 0px 2px #2a68af !important;
-  -webkit-box-shadow: 0 0px 2px #2a68af !important;
-  box-shadow: 0 0px 2px #2a68af !important;
-}
-form input::placeholder, form textarea::placeholder {
-  color: #000;
-}
-form .input-submit {
-  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
-  color: white;
-  background: #2a68af;
-  cursor: pointer;
-}
-form .input-submit:hover {
-  -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
-  -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
-  box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
-}
-form textarea {
-  height: 126px;
-}
 
 .half {
   float: left;
@@ -139,5 +133,4 @@ form textarea {
 .cf:after {
   clear: both;
 }
-
 
