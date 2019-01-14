@@ -11,8 +11,38 @@ html, body {
   background: #f1f1f1;
   font-family: 'Merriweather', sans-serif;
   padding: 1em;
+  padding-top: 0;
+  margin-top:0;
 }
 
+/* nav bar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #2a68af;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  font-family: 'Merriweather', sans-serif;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #327acd;
+}
+
+
+/* registration form */
 h1,h2 {
   text-align: center;
   color: #808080;
@@ -67,6 +97,19 @@ form .input-submit:hover {
 }
 form textarea {
   height: 126px;
+}
+
+.messages{
+  text-align: left;
+  color: #e62e00;
+  background-color: #ffad99;
+  border: 8px solid #ffad99;
+  border-left: 1em solid #ffad99;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+
+  display:none;
 }
 
 .half {

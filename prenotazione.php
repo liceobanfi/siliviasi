@@ -108,7 +108,7 @@ foreach($daysInfo as $day => $hours)
   </head>
   <body>
     <div class="container cf">
-    <a id="js-back">indietro</a>
+    <!-- <a id="js-back">indietro</a> -->
     <div class="user-table-wrapper">
       <h2>le tue prenotazioni</h2>
 <?php echo $registrazioni; ?>

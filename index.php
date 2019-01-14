@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="./css/index.css" >
   </head>
   <body>
+    <nav>
+      <ul>
+        <li><a class="active" href="#home">home</a></li>
+        <li><a href="#news">SilviaSi</a></li>
+        <li><a href="#contact">informazioni</a></li>
+      </ul>
+    </nav>
     <div class="form-wrapper">
       <h1>SilviaSi</h1>
       <form id="js-registration-form" class="cf" >
@@ -23,6 +30,7 @@
       <span style="color:red">(*)</span> Recapito telefonico:<br/><input name="telefono" />
       </div>
 -->
+      <p class="messages" id="js-messages">non valida qwe qwe qwe qwe </p>
       <input id="js-registrati" type="button" value="avanti" class="input-submit">
       </form>
     </div>
