@@ -21,6 +21,9 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #2a68af;
+  -moz-box-shadow: 10px 2px 2px white;
+  -webkit-box-shadow: 10px 21px 2px white;
+  box-shadow: 0 2px 0 white;
 }
 
 li {

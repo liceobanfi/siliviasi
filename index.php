@@ -20,7 +20,8 @@
       <h1>SilviaSi</h1>
       <form id="js-registration-form" class="cf" >
       <h2>Prenotazione visite guidate 29-30-31/1 1/2</h2>
-      <h2>accesso riservato ai docenti</h2>
+      <p><strong>accesso riservato ai docenti. </strong> Inserire i propri dati per prenotare un giorno o modificare 
+le proprie prenotazioni</p>
       <input name="scuola" placeholder="istituto" />
       <input name="citta" placeholder="città" />
       <input name="docente" placeholder="docente responsabile" />
