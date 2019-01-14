@@ -103,8 +103,8 @@ foreach($daysInfo as $day => $hours)
     <title>open day</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <script type="text/javascript" src="./js/jquery-3.3.1-min.js"></script>
-    <script async type="text/javascript" src="./js/registrazione.js" ></script>
-    <link rel="stylesheet" href="./css/registrazione.css" >
+    <script async type="text/javascript" src="./js/prenotazione.js" ></script>
+    <link rel="stylesheet" href="./css/prenotazione.css" >
   </head>
   <body>
     <nav>
@@ -117,8 +117,8 @@ foreach($daysInfo as $day => $hours)
     <div class="page-wrapper">
 
       <div class="container cf">
-      <!-- <a id="js-back">indietro</a> -->
       <div class="user-table-wrapper">
+        <p><a id="js-back" class="back-bt">indietro</a></p>
         <h2>le tue prenotazioni</h2>
   <?php echo $registrazioni; ?>
       </div>

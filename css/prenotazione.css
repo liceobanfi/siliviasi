@@ -55,8 +55,16 @@ h1,h2 {
   color: #808080;
   text-shadow: 1px 1px 0 white;
 }
-h2{
+h2 {
   text-align:left;
+}
+
+.back-bt {
+  color: #327acd;
+  cursor: pointer;
+  font-family: 'Merriweather', sans-serif;
+  text-align:left;
+  padding-top: 0;
 }
 
 /* --- user table --- */
