@@ -20,7 +20,7 @@ $(document).ready( function()
       alert("completare tutti i campi");
     } else
     {
-      window.location.href = 'registrazione.php?'+
+      window.location.href = 'prenotazione.php?'+
         $("#js-registration-form").serialize();
     }
   }

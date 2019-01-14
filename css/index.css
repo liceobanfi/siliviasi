@@ -1,14 +1,10 @@
-/* @import url(https://fonts.googleapis.com/css?family=Merriweather); */
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
 *,
 *:before,
 *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.hidden{
-  display:none;
 }
 
 html, body {
@@ -26,26 +22,7 @@ h2{
   text-align:left;
 }
 
-.user-table-wrapper table{
-  border-collapse: collapse;
-}
-
-table td, table th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-table th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  color: #2a68af;
-}
-table tr:nth-child(even){background-color: #f2f2f2;}
-
-table tr:hover {background-color: #ddd;}
-
-.container {
+form {
   max-width: 600px;
   text-align: center;
   margin: 20px auto;
@@ -125,5 +102,4 @@ form textarea {
 .cf:after {
   clear: both;
 }
-
 

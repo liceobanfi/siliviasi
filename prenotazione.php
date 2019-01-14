@@ -57,7 +57,7 @@ while ($row = $stmt->fetch()) {
 
 if($regTableLength === 0)
 {
-  $registrazioni = "<p>non hai ancora registrato nessun giorno</p>";
+  $registrazioni = "<p>non hai ancora prenotato un giorno</p>";
 }else
 {
   $registrazioni =
@@ -107,14 +107,16 @@ foreach($daysInfo as $day => $hours)
     <link rel="stylesheet" href="./css/registrazione.css" >
   </head>
   <body>
-    <button id="js-back">indietro</button>
+    <div class="container cf">
+    <a id="js-back">indietro</a>
     <div class="user-table-wrapper">
-      <h1>le tue registrazioni</h1>
+      <h2>le tue prenotazioni</h2>
 <?php echo $registrazioni; ?>
     </div>
     <div class="days-table-wrapper" id="js-registrable-days">
-      <h1>seleziona una data</h1>
+      <h2>seleziona una data</h2>
 <?php echo $tabellaGiorni ?>
+    </div>
     </div>
   </body>
 </html>
