@@ -37,7 +37,7 @@ $(document).ready( function()
     //show the table for the selected day
     currentDay = $(this).val()
     var currentTable = $('#js-hours-tables-container [data-day="' + currentDay + '"]')
-    currentTable.show(400);
+    currentTable.fadeIn(400, "linear");
   });
 
 
