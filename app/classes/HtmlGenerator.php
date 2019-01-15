@@ -1,14 +1,30 @@
 <?php
 
 /**
- * TODO: move require_once for the database class here, with a relative path and remove
+ * this is a helper class that contains methods for generating html elements mixed with data
+ * @todo: move require_once for the database class here, with a relative path and remove
  * it from prenotazione.php
  *
  */
 class HtmlGenerator {
 
   /**
-   *
+   * this method returns a table containing all the user prenotations
+   * @return string - the html table containing the user prenotations
+   * @template
+   * <code>
+   *  <table id="js-registered-table">
+   *    <tr>
+   *      <th> giorno </th>
+   *      <th> orario </th>
+   *      <th> opzioni </th>
+   *    </tr><tr>
+   *      <td>$DAY[]</td>
+   *      <td>$HOUR[]</td>
+   *      <td> <button>cancella</button></td>
+   *    </tr>
+   *  </table>
+   * </code>
    */
   public static function reservationsTable($mail){
     global $days;
@@ -123,7 +139,7 @@ class HtmlGenerator {
         $isFirstKey = false;
         $hidden = "";
       }
-      $output .= "<table value=\"$day\" class=\" $hidden hours-container half right-big\">";
+      $output .= "<table data-day=\"$day\" class=\" $hidden hours-container half right-big\">";
       foreach($hours as $hour => $free)
       {
         $class = $free ? "free" : "taken";

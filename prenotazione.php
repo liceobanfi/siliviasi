@@ -69,21 +69,20 @@ $hoursTables = HtmlGenerator::hoursTables();
   <!-- END PHP GENERATED OUTPUT -->
       </div>
 
+      <div class="days-table-wrapper" id="js-registrable-days">
+        <h2>prenota una data</h2>
+        <div class="days-container half left-small">
+      <!-- BEGIN PHP GENERATED OUTPUT -->
+      <?php echo $daysRadioList ?>
+      <!-- END PHP GENERATED OUTPUT -->
+        </div>
 
-  <div class="days-table-wrapper" id="js-registrable-days">
-    <h2>prenota una data</h2>
-    <div class="days-container half left-small">
-  <!-- BEGIN PHP GENERATED OUTPUT -->
-  <?php echo $daysRadioList ?>
-  <!-- END PHP GENERATED OUTPUT -->
-    </div>
-
-    <div id="js-hours-tables-container">
-  <!-- BEGIN PHP GENERATED OUTPUT -->
-  <?php echo $hoursTables ?>
-  <!-- END PHP GENERATED OUTPUT -->
-    </div>
-  </div>
+        <div id="js-hours-tables-container">
+      <!-- BEGIN PHP GENERATED OUTPUT -->
+      <?php echo $hoursTables ?>
+      <!-- END PHP GENERATED OUTPUT -->
+        </div>
+      </div>
 
     </div>
   </body>

@@ -172,6 +172,10 @@ table button{
 
 }
 
+tr.taken td{
+  color: #8c8c8c;
+}
+
 .control {
   display: block;
   position: relative;

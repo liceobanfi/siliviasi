@@ -31,37 +31,31 @@ $(document).ready( function()
   /**
    * toggle days
    */
-  var currentDay = "";
   $("#js-registrable-days input:radio[name=radio]").click( function(){
-    currentDay = $(this).val()
-    console.log(currentDay)
-    var radioButtons = $("#myFormID input:radio[name='radioFieldName']");
-    var selectedIndex = radioButtons.index(radioButtons.filter(':checked'));
-    
     //hide all the tables
     $(".hours-container").hide();
     //show the table for the selected day
-    var currentTable = $('#js-hours-tables-container [value="' + currentDay + '"]')
-    currentTable.show(300);
+    currentDay = $(this).val()
+    var currentTable = $('#js-hours-tables-container [data-day="' + currentDay + '"]')
+    currentTable.show(400);
   });
 
-  
 
   /**
    * makes an api call to register a day
    */
-  // $("#js-registrable-days button").click( function(){
-  //   var giorno = $(this).parent().parent().prev().html();
-  //   var orario = $(this).prev().html();
-  //   $.ajax({
-  //     type: "POST",
-  //     url: 'app/manage-days.php',
-  //     data: "action=add&giorno="+giorno+"&orario="+orario,
-  //     success: function(){
-  //       updateData();
-  //     }
-  //   });
-  // })
+  $("#js-registrable-days button").click( function(){
+    var giorno = $(this).parents("table").attr("data-day");
+    var orario = $(this).parent().prev().html();
+    $.ajax({
+      type: "POST",
+      url: 'app/manage-days.php',
+      data: "action=add&giorno="+giorno+"&orario="+orario,
+      success: function(){
+        updateData();
+      }
+    });
+  })
 
 
 });
