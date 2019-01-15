@@ -10,7 +10,7 @@
   </head>
   <body>
     <nav>
-      <img class="logo" src="resources/logo4.png" />
+      <a href="https://www.liceobanfi.gov.it/"><img class="logo"  src="resources/logo4.png" /></a>
       <ul>
         <li class="ghost"><a></a></li>
         <li><a href="https://www.liceobanfi.gov.it/">home</a></li>
