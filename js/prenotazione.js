@@ -31,30 +31,37 @@ $(document).ready( function()
   /**
    * toggle days
    */
-  $("div.days-table-wrapper > button").click( function(){
-    $("div#js-registrable-days > div").hide();
-    if($(this).next().is(":hidden")){
-      $(this).next().show(100);
-    }else{
-      $(this).next().hide(100);
-    }
+  var currentDay = "";
+  $("#js-registrable-days input:radio[name=radio]").click( function(){
+    currentDay = $(this).val()
+    console.log(currentDay)
+    var radioButtons = $("#myFormID input:radio[name='radioFieldName']");
+    var selectedIndex = radioButtons.index(radioButtons.filter(':checked'));
+    
+    //hide all the tables
+    $(".hours-container").hide();
+    //show the table for the selected day
+    var currentTable = $('#js-hours-tables-container [value="' + currentDay + '"]')
+    currentTable.show(300);
   });
+
+  
 
   /**
    * makes an api call to register a day
    */
-  $("#js-registrable-days button").click( function(){
-    var giorno = $(this).parent().parent().prev().html();
-    var orario = $(this).prev().html();
-    $.ajax({
-      type: "POST",
-      url: 'app/manage-days.php',
-      data: "action=add&giorno="+giorno+"&orario="+orario,
-      success: function(){
-        updateData();
-      }
-    });
-  })
+  // $("#js-registrable-days button").click( function(){
+  //   var giorno = $(this).parent().parent().prev().html();
+  //   var orario = $(this).prev().html();
+  //   $.ajax({
+  //     type: "POST",
+  //     url: 'app/manage-days.php',
+  //     data: "action=add&giorno="+giorno+"&orario="+orario,
+  //     success: function(){
+  //       updateData();
+  //     }
+  //   });
+  // })
 
 
 });

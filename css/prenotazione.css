@@ -47,12 +47,7 @@ li a:hover {
   display:none;
 }
 
-.page-wrapper{
-  margin: 8px;
-  padding: 1em;
-  margin-top:0;
-}
-.container {
+.page-wrapper {
   padding: 1em;
   margin-top:0;
   text-align: center;
