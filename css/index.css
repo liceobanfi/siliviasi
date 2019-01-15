@@ -115,7 +115,7 @@ form textarea {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
-
+  text-shadow: 0 0 0 #000;
   display:none;
 }
 

@@ -33,7 +33,11 @@ $(document).ready( function()
    */
   $("div.days-table-wrapper > button").click( function(){
     $("div#js-registrable-days > div").hide();
-    $(this).next().show("slow");
+    if($(this).next().is(":hidden")){
+      $(this).next().show(100);
+    }else{
+      $(this).next().hide(100);
+    }
   });
 
   /**

@@ -48,9 +48,16 @@ li a:hover {
 }
 
 .page-wrapper{
-  padding: 1em;
   margin: 8px;
+  padding: 1em;
   margin-top:0;
+}
+.container {
+  padding: 1em;
+  margin-top:0;
+  text-align: center;
+  max-width: 600px;
+  margin: 20px auto;
 }
 
 h1,h2 {
@@ -75,7 +82,7 @@ h2 {
   text-align: left;
   color: #808080;
 }
-.user-table-wrapper table{
+table{
   border-collapse: collapse;
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
@@ -83,6 +90,7 @@ h2 {
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+  width: 100%;
 }
 
 table td, table th {
@@ -95,7 +103,7 @@ table td, table th {
 table th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  /* text-align: left; */
   color: #2a68af;
 }
 table button{
@@ -105,16 +113,21 @@ table button{
   cursor: pointer;
   text-decoration: underline;
 }
-.container {
-  max-width: 600px;
-  text-align: center;
-  margin: 20px auto;
-}
 
 .half {
   float: left;
   width: 48%;
   margin-bottom: 1em;
+}
+
+.left-small {
+  float: left;
+  width: 200px;
+  margin-bottom: 1em;
+  margin-right: 20px;
+}
+.right-big{
+  width: calc(100% - 220px);
 }
 
 .right {
@@ -143,5 +156,83 @@ table button{
 
 .cf:after {
   clear: both;
+}
+
+
+
+.days-container{
+  background-color: white;
+  padding: 1em;
+  color: #404040;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  font-family: 'Merriweather', sans-serif;
+  -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1); border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.hours-container{
+
+}
+
+.control {
+  display: block;
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #e6e6e6;
+}
+.control--radio .control__indicator {
+  border-radius: 50%;
+}
+.control:hover input ~ .control__indicator,
+.control input:focus ~ .control__indicator {
+  background: #ccc;
+}
+.control input:checked ~ .control__indicator {
+  background: #2a68af;
+}
+.control:hover input:not([disabled]):checked ~ .control__indicator,
+.control input:checked:focus ~ .control__indicator {
+  background: #3288d6;
+}
+.control input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.control__indicator:after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+.control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.control--radio .control__indicator:after {
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
+}
+.control--radio input:disabled ~ .control__indicator:after {
+  background: #7b7b7b;
 }
 

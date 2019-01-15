@@ -57,10 +57,10 @@ while ($row = $stmt->fetch()) {
 
 if($regTableLength === 0)
 {
-  $registrazioni = "<p>non hai ancora prenotato un giorno</p>";
+  $prenotazioni = "<p>non hai ancora prenotato un giorno</p>";
 }else
 {
-  $registrazioni =
+  $prenotazioni =
 "<table id=\"js-registered-table\">
 <tr>
   <th> giorno </th>
@@ -114,19 +114,52 @@ foreach($daysInfo as $day => $hours)
         <li><a href="informazioni.html">informazioni</a></li>
       </ul>
     </nav>
-    <div class="page-wrapper">
+    <div class="container cf">
 
-      <div class="container cf">
       <div class="user-table-wrapper">
         <p><a id="js-back" class="back-bt">indietro</a></p>
         <h2>le tue prenotazioni</h2>
-  <?php echo $registrazioni; ?>
+  <?php echo $prenotazioni; ?>
       </div>
-      <div class="days-table-wrapper" id="js-registrable-days">
-        <h2>prenota una data</h2>
-  <?php echo $tabellaGiorni ?>
-      </div>
-      </div>
+
+ <!-- <?php echo $tabellaGiorni ?> -->
+
+  <div class="days-table-wrapper" id="js-registrable-days">
+    <h2>prenota una data</h2>
+    <div class="days-container half left-small">
+  <!-- BEGIN PHP GENERATED OUTPUT -->
+      <label class="control control--radio">29 gennaio 2019
+        <input type="radio" name="radio" checked="checked"/>
+        <div class="control__indicator"></div>
+      </label>
+      <label class="control control--radio">30 gennaio 2019
+        <input type="radio" name="radio"/>
+        <div class="control__indicator"></div>
+      </label>
+      <label class="control control--radio">Second radio
+        <input type="radio" name="radio"/>
+        <div class="control__indicator"></div>
+      </label>
+      <label class="control control--radio">Second radio
+        <input type="radio" name="radio"/>
+        <div class="control__indicator"></div>
+      </label>
+  <!-- END PHP GENERATED OUTPUT -->
+    </div>
+
+    <table class="hours-container half right-big">
+  <!-- BEGIN PHP GENERATED OUTPUT -->
+      <tr>
+      <td>[09:00 - 10:05]  Gruppo 4</td>
+      <td> <button>prenota</button></td> 
+      </tr>
+      <tr>
+      <td>[09:00 - 10:05]  Gruppo 4</td>
+      <td> <button>prenota</button></td>
+      </tr>
+  <!-- END PHP GENERATED OUTPUT -->
+    </table>
+  </div>
 
     </div>
   </body>
