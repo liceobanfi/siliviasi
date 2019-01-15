@@ -21,9 +21,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #2a68af;
-  -moz-box-shadow: 10px 2px 2px white;
-  -webkit-box-shadow: 10px 21px 2px white;
-  box-shadow: 0 2px 0 white;
+  border-bottom: 4px solid rgba(0,0,0,0.1)
 }
 
 li {
@@ -152,7 +150,7 @@ table button{
   margin-right: 2%;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .half {
     width: 100%;
     float: none;
@@ -252,5 +250,27 @@ tr.taken td{
 }
 .control--radio input:disabled ~ .control__indicator:after {
   background: #7b7b7b;
+}
+
+/* --- footer --- */
+.footer{
+  width: 100%;
+  background-color: rgba(0,0,0,0.1);
+  border-top: 2px solid rgba(0,0,0,0.1);
+  margin:0;
+  margin-top: 40px;
+  padding:10px;
+  text-align: center;
+  -moz-box-shadow:  0 -2px 0 white;
+  -webkit-box-shadow: 0 -2px 0 white;
+  box-shadow: 0 -2px 0 white;
+}
+.footer p{
+  text-align: center;
+  color: #808080;
+  text-shadow: 1px 1px 0 white
+}
+.footer a{
+  color: #2a68af;
 }
 

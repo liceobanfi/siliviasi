@@ -15,7 +15,7 @@
         <li class="ghost"><a></a></li>
         <li><a href="https://www.liceobanfi.gov.it/">home</a></li>
         <li><a href="http://silviasi.it/">SilviaSi</a></li>
-        <li><a href="informazioni.html">informazioni</a></li>
+        <li><a href="">informazioni</a></li>
       </ul>
     </nav>
     <div class="form-wrapper">
@@ -36,6 +36,14 @@ le proprie prenotazioni</p>
       <p class="messages" id="js-messages">non valida qwe qwe qwe qwe </p>
       <input id="js-registrati" type="button" value="avanti" class="input-submit">
       </form>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2018-<?php echo date("Y"); ?> Liceo A. Banfi | Pagina realizzata dagli studenti 
+dell'indirizzo scienze applicate nell'ambito del progetto $nomeProgetto<br>
+      <a href="https://github.com/liceobanfi/siliviasi">visita il codice</a> | 
+      <a href="https://www.liceobanfi.gov.it/note-legali/privacy">privacy</a> |
+      <a href="">info</a> </p>
     </div>
 
   </body>

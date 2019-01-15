@@ -58,7 +58,7 @@ $hoursTables = HtmlGenerator::hoursTables();
         <li class="ghost"><a></a></li>
         <li><a class="active" href="https://www.liceobanfi.gov.it/">home</a></li>
         <li><a href="http://silviasi.it/">SilviaSi</a></li>
-        <li><a href="informazioni.html">informazioni</a></li>
+        <li><a href="">informazioni</a></li>
       </ul>
     </nav>
     <div class="page-wrapper cf">
@@ -66,9 +66,9 @@ $hoursTables = HtmlGenerator::hoursTables();
       <div class="user-table-wrapper">
         <p><a id="js-back" class="back-bt">indietro</a></p>
         <h2>le tue prenotazioni</h2>
-  <!-- BEGIN PHP GENERATED OUTPUT -->
-  <?php echo $reservationsTable; ?>
-  <!-- END PHP GENERATED OUTPUT -->
+      <!-- BEGIN PHP GENERATED OUTPUT -->
+      <?php echo $reservationsTable; ?>
+      <!-- END PHP GENERATED OUTPUT -->
       </div>
 
       <div class="days-table-wrapper" id="js-registrable-days">
@@ -86,6 +86,14 @@ $hoursTables = HtmlGenerator::hoursTables();
         </div>
       </div>
 
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2018-<?php echo date("Y"); ?> Liceo A. Banfi | Pagina realizzata dagli studenti 
+dell'indirizzo scienze applicate nell'ambito del progetto $nomeProgetto<br>
+      <a href="https://github.com/liceobanfi/siliviasi">visita il codice</a> | 
+      <a href="https://www.liceobanfi.gov.it/note-legali/privacy">privacy</a> |
+      <a href="">info</a> </p>
     </div>
   </body>
 </html>
