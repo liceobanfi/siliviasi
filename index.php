@@ -10,8 +10,10 @@
   </head>
   <body>
     <nav>
+      <img class="logo" src="resources/logo4.png" />
       <ul>
-        <li><a class="active" href="https://www.liceobanfi.gov.it/">home</a></li>
+        <li class="ghost"><a></a></li>
+        <li><a href="https://www.liceobanfi.gov.it/">home</a></li>
         <li><a href="http://silviasi.it/">SilviaSi</a></li>
         <li><a href="informazioni.html">informazioni</a></li>
       </ul>

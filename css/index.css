@@ -1,3 +1,9 @@
+/*
+ *https://codepen.io/markmurray/pen/JsAhx
+ *https://codepen.io/anon/pen/yGZzKQ
+ *
+ *
+ */
 @import url(https://fonts.googleapis.com/css?family=Merriweather);
 *,
 *:before,
@@ -41,6 +47,26 @@ li a {
 
 li a:hover {
   background-color: #327acd;
+}
+
+.ghost a{
+  width:80px;
+  margin-left:20px;
+}
+.logo {
+  position:absolute;
+  top: 0;
+  left: 20px;
+  width: 70px;
+  height:auto;
+}
+@media (max-width: 420px) {
+  .ghost a{
+    display:none;
+  }
+  .logo {
+    display:none;
+  }
 }
 
 
@@ -87,7 +113,24 @@ form input:focus, form textarea:focus {
   box-shadow: 0 0px 2px #2a68af !important;
 }
 form input::placeholder, form textarea::placeholder {
-  color: #000;
+  color: #767676;
+  opacity: 1;
+}
+form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #767676;
+  opacity: 1;
+}
+form input::-moz-placeholder { /* Firefox 19+ */
+  color: #767676;
+  opacity: 1;
+}
+form input:-ms-input-placeholder { /* IE 10+ */
+  color: #767676;
+  opacity: 1;
+}
+form input:-moz-placeholder { /* Firefox 18- */
+  color: #767676;
+  opacity: 1;
 }
 form .input-submit {
   -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);

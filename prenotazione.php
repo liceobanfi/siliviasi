@@ -53,7 +53,9 @@ $hoursTables = HtmlGenerator::hoursTables();
   </head>
   <body>
     <nav>
+      <a href="https://www.liceobanfi.gov.it/"><img class="logo"  src="resources/logo4.png" /></a>
       <ul>
+        <li class="ghost"><a></a></li>
         <li><a class="active" href="https://www.liceobanfi.gov.it/">home</a></li>
         <li><a href="http://silviasi.it/">SilviaSi</a></li>
         <li><a href="informazioni.html">informazioni</a></li>

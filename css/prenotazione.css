@@ -42,6 +42,25 @@ li a {
 li a:hover {
   background-color: #327acd;
 }
+.ghost a{
+  width:80px;
+  margin-left:20px;
+}
+.logo {
+  position:absolute;
+  top: 0;
+  left: 20px;
+  width: 70px;
+  height:auto;
+}
+@media (max-width: 420px) {
+  .ghost a{
+    display:none;
+  }
+  .logo {
+    display:none;
+  }
+}
 
 .hidden{
   display:none;

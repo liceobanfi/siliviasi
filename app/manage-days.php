@@ -1,9 +1,9 @@
 <?php
 
 /**
- * api endpoint for the registrazione.php front end
+ * api endpoint for the prenotazione.php front end
  *
- * this page receives a GET requests from the registrazione.php front end
+ * this page receives a GET requests from the prenotazione.php front end
  * when the user subscribes or cancel the subscription to a day.
  *
  * parameters received:
@@ -13,7 +13,7 @@
  */
 $config = require 'config/config.php';
 $days = require 'config/days-config.php';
-require_once 'classes/connectDb.php';
+require_once 'classes/ConnectDb.php';
 require_once 'classes/SessionManager.php';
 
 //initialize session, and die if the user is not in session

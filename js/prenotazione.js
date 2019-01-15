@@ -1,7 +1,7 @@
 $(document).ready( function()
 {
   $("#js-back").click( function(){
-    window.history.back();
+    window.location.href = "index.php";
   });
 
   function updateData(){
