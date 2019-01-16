@@ -1,8 +1,5 @@
 $(document).ready( function()
 {
-  $("#js-back").click( function(){
-    window.location.href = "index.php";
-  });
 
   function updateData(){
     //TODO: this works prefectly on a small html page with no style or

@@ -64,7 +64,7 @@ $hoursTables = HtmlGenerator::hoursTables();
     <div class="page-wrapper cf">
 
       <div class="user-table-wrapper">
-        <p><a id="js-back" class="back-bt">indietro</a></p>
+        <p><a href="index.php" id="js-back" class="back-bt">indietro</a></p>
         <h2>le tue prenotazioni</h2>
       <!-- BEGIN PHP GENERATED OUTPUT -->
       <?php echo $reservationsTable; ?>
