@@ -61,3 +61,7 @@ a very useful guide [phpdelusions.net/pdo](https://phpdelusions.net/pdo)
 - [PDO](https://phpdelusions.net/pdo)
 - [error handling](http://nyphp.org/PHundamentals/7_PHP-Error-Handling)
 
+## credits
+
+- minimalistic input form *https://codepen.io/markmurray/pen/JsAhx
+- css radio buttons *https://codepen.io/anon/pen/yGZzKQ

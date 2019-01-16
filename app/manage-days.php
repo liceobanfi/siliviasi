@@ -48,15 +48,26 @@ if (!(array_key_exists($giorno, $days) && array_key_exists($orario, $days[$giorn
 $instance = ConnectDb::getInstance();
 $pdo = $instance->getConnection();
 
+//prepare the data to store in the database
 $action = $_POST['action'];
-$info = "--";
+$info = "";
+if (!empty($_SERVER['HTTP_CLIENT_IP'])){
+  $ip = $_SERVER['HTTP_CLIENT_IP'];
+}else{
+  $ip = $_SERVER['REMOTE_ADDR'];
+}
+$forwarded = "";
+if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
+  $forwarded = $_SERVER['HTTP_X_FORWARDED_FOR'];
+}
+$timestamp = time();
 
 if($action === "add")
 {
   $stmt = $pdo->prepare(
     'insert  into
-    `iscrizione`(`giorno`,`orario`,`scuola`,`citta`,`docente`,`mail`,`telefono`,`info`) values 
-    (:giorno, :orario, :scuola, :citta, :docente, :mail, :telefono, :info) '
+    `iscrizione`(`giorno`,`orario`,`scuola`,`citta`,`docente`,`mail`,`telefono`,`info`,`ip`,`forwarded_host_ip`,`timestamp` ) values 
+    (:giorno, :orario, :scuola, :citta, :docente, :mail, :telefono, :info, :ip, :forwarded, :timestamp) '
   );
   $stmt->execute( [
   'scuola' => $_SESSION['scuola'],
@@ -66,7 +77,10 @@ if($action === "add")
   'docente' => $_SESSION['docente'],
   'mail' => $_SESSION['mail'],
   'telefono' => $_SESSION['telefono'],
-  'info' => $info
+  'info' => $info,
+  'ip' => $ip,
+  'forwarded' => $forwarded,
+  'timestamp' => $timestamp
   ]);
 
   $affectedRows = $stmt->rowCount();

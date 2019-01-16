@@ -27,12 +27,14 @@ CREATE TABLE `iscrizione` (
   `mail` varchar(30) DEFAULT NULL,
   `telefono` varchar(30) DEFAULT NULL,
   `info` varchar(1000) DEFAULT NULL,
+  `ip` varchar(15) DEFAULT NULL,
+  `forwarded_host_ip` varchar(15) DEFAULT NULL,
+  `timestamp` varchar(15) DEFAULT NULL,
   PRIMARY KEY (`giorno`,`orario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*Data for the table `iscrizione` */
 
-insert  into `iscrizione`(`giorno`,`orario`,`scuola`,`citta`,`docente`,`mail`,`telefono`,`info`) values 
-('03 febbraio 2019',"8 - 8.4",'Galilei','Voghera','Rossi','rossi@gmail.com','o','o');
+
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
