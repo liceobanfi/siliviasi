@@ -16,7 +16,8 @@ return [
     '10:30 | Gruppo 5' => true,
     '11:00 | Gruppo 6' => true,
     '11:30 | Gruppo 7' => true,
-    '12:00 | Gruppo 8' => true
+    '12:00 | Gruppo 8' => true,
+    '12:30 | Gruppo 9' => true
   ],
   '30 gennaio 2019' => [
     '08:30 | Gruppo 1' => true,
@@ -26,7 +27,8 @@ return [
     '10:30 | Gruppo 5' => true,
     '11:00 | Gruppo 6' => true,
     '11:30 | Gruppo 7' => true,
-    '12:00 | Gruppo 8' => true
+    '12:00 | Gruppo 8' => true,
+    '12:30 | Gruppo 9' => true
   ],
   '31 gennaio 2019' => [
     '08:30 | Gruppo 1' => true,
@@ -36,7 +38,8 @@ return [
     '10:30 | Gruppo 5' => true,
     '11:00 | Gruppo 6' => true,
     '11:30 | Gruppo 7' => true,
-    '12:00 | Gruppo 8' => true
+    '12:00 | Gruppo 8' => true,
+    '12:30 | Gruppo 9' => true
   ],
   '01 febbraio 2019' => [
     '08:30 | Gruppo 1' => true,
@@ -46,7 +49,8 @@ return [
     '10:30 | Gruppo 5' => true,
     '11:00 | Gruppo 6' => true,
     '11:30 | Gruppo 7' => true,
-    '12:00 | Gruppo 8' => true
+    '12:00 | Gruppo 8' => true,
+    '12:30 | Gruppo 9' => true
   ]
 ];
 
