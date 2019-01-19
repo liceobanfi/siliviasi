@@ -7,7 +7,7 @@
  * when the user subscribes or cancel the subscription to a day.
  *
  * parameters received:
- * action string - can be either "add" or "remove"
+ * action string - can be either "add" or "delete"
  * giorno string - the day the user wants to subscribe to
  * orario string - the hour the user wants to subscrbe to
  */
