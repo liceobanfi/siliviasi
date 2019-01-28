@@ -17,5 +17,9 @@ return array(
   //MAIL CONFIGURATION
   'smtpHost' => '',
   'smtpUsername' => '',
-  'smtpPassword' => ''
+  'smtpPassword' => '',
+  //ADMIN CONFIGURATION
+  //default id: 'admin' - bcrypt hash
+  //generate your own hash with the utility page in tests/password-hash.php?password=YOURPASSWORD
+  'adminId' => '$2y$13$G86OHLKLGMn8IutECN86Pu7fnXaS8ExD0hdIPqxjVtr/c50xYGg5C'
 );

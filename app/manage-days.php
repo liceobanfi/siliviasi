@@ -49,7 +49,6 @@ $instance = ConnectDb::getInstance();
 $pdo = $instance->getConnection();
 
 //prepare the data to store in the database
-$action = $_POST['action'];
 $info = "";
 if (!empty($_SERVER['HTTP_CLIENT_IP'])){
   $ip = $_SERVER['HTTP_CLIENT_IP'];
@@ -62,6 +61,7 @@ if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])){
 }
 $timestamp = time();
 
+$action = $_POST['action'];
 if($action === "add")
 {
   $stmt = $pdo->prepare(

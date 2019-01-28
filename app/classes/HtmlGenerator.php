@@ -9,6 +9,66 @@
 class HtmlGenerator {
 
   /**
+   * this method returns a table containing all the prenotations
+   * @return string - the html table containing all the prenotations
+   * @template
+   * <code>
+   *  <table id="js-registered-table">
+   *    <tr>
+   *      <th> giorno </th>
+   *      <th> orario </th>
+   *      <th> scuola </th>
+   *      <th> docente </th>
+   *    </tr><tr>
+   *      <td>$DAY[]</td>
+   *      <td>$HOUR[]</td>
+   *      <td>$SCHOOL[]</td>
+   *      <td>$PROFESSOR[]</td>
+   *    </tr>
+   *  </table>
+   * </code>
+   */
+  public static function allReservationsTable(){
+    global $days;
+    //init db connection
+    $instance = ConnectDb::getInstance();
+    $pdo = $instance->getConnection();
+
+    //get registered days
+    $stmt = $pdo->prepare('SELECT * FROM iscrizione  order by giorno, orario');
+    $stmt->execute();
+
+    $tableHtml = "";
+    $tableLength = 0;
+    while ($row = $stmt->fetch()) {
+      $tableLength++;
+      $tableHtml .=
+      "<tr>
+        <td>" . $row['giorno'] . "</td>
+        <td>" . $row['orario'] . "</td>
+        <td>" . $row['scuola'] . "</td>
+        <td>" . $row['docente'] . "</td>
+      <tr>";
+    }
+
+    if($tableLength === 0)
+    {
+      $output = "<p>nessuna prenotazione trovata</p>";
+    }else
+    {
+      $output =
+      "<table id=\"js-registered-table\">
+      <tr>
+        <th> giorno </th>
+        <th> orario </th>
+        <th> scuola </th>
+        <th> docente </th>
+      </tr>". $tableHtml . "</table>";
+    }
+    return $output;
+  }
+
+  /**
    * this method returns a table containing all the user prenotations
    * @return string - the html table containing the user prenotations
    * @template
