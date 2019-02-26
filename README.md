@@ -9,6 +9,7 @@ for the liceo banfi SilviaSi exibition
 ## documentation and style guide
 The code documentation is based on the [PHPdoc](http://manual.phpdoc.org/HTMLframesConverter/default/) standard
 
+-
 
 For the complete style guide, please read the [style guide](style-guide.md) page
 
