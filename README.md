@@ -34,5 +34,5 @@ a very useful guide [phpdelusions.net/pdo](https://phpdelusions.net/pdo)
 
 ## credits
 
-- minimalistic input form *https://codepen.io/markmurray/pen/JsAhx
-- css radio buttons *https://codepen.io/anon/pen/yGZzKQ
+- minimalistic input form inspired by: https://codepen.io/markmurray/pen/JsAhx
+- css radio buttons by: https://codepen.io/anon/pen/yGZzKQ
