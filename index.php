@@ -9,33 +9,35 @@
     <link rel="stylesheet" href="./css/index.css" >
   </head>
   <body>
-    <nav>
-      <a href="https://www.liceobanfi.gov.it/"><img class="logo"  src="resources/logo4.png" /></a>
-      <ul>
-        <li class="ghost"><a></a></li>
-        <li><a href="https://www.liceobanfi.gov.it/">home</a></li>
-        <li><a href="http://silviasi.it/">SilviaSi</a></li>
-        <li><a href="">informazioni</a></li>
-      </ul>
-    </nav>
-    <div class="form-wrapper">
-      <h1>SilviaSi</h1>
-      <form id="js-registration-form" class="cf" >
-      <h2>Prenotazione visite guidate 29-30-31/1 1/2</h2>
-      <p><strong>accesso riservato ai docenti. </strong> Inserire i propri dati per prenotare un giorno o modificare 
-le proprie prenotazioni</p>
-      <input name="scuola" placeholder="istituto" />
-      <input name="citta" placeholder="città" />
-      <input name="docente" placeholder="docente responsabile" />
-      <input name="mail" placeholder="mail" />
-      <input name="telefono" placeholder="telefono" />
-<!--      <div>
-      <span style="color:red">(*)</span> Recapito telefonico:<br/><input name="telefono" />
+    <div>
+      <nav>
+        <a href="https://www.liceobanfi.gov.it/"><img class="logo"  src="resources/logo4.png" /></a>
+        <ul>
+          <li class="ghost"><a></a></li>
+          <li><a href="https://www.liceobanfi.gov.it/">home</a></li>
+          <li><a href="http://silviasi.it/">SilviaSi</a></li>
+          <li><a href="">informazioni</a></li>
+        </ul>
+      </nav>
+      <div class="form-wrapper">
+        <h1>SilviaSi</h1>
+        <form id="js-registration-form" class="cf" >
+        <h2>Prenotazione visite guidate 29-30-31/1 1/2</h2>
+        <p><strong>accesso riservato ai docenti. </strong> Inserire i propri dati per prenotare un giorno o modificare 
+  le proprie prenotazioni</p>
+        <input name="scuola" placeholder="istituto" />
+        <input name="citta" placeholder="città" />
+        <input name="docente" placeholder="docente responsabile" />
+        <input name="mail" placeholder="mail" />
+        <input name="telefono" placeholder="telefono" />
+  <!--      <div>
+        <span style="color:red">(*)</span> Recapito telefonico:<br/><input name="telefono" />
+        </div>
+  -->
+        <p class="messages" id="js-messages">non valida qwe qwe qwe qwe </p>
+        <input id="js-registrati" type="button" value="avanti" class="input-submit">
+        </form>
       </div>
--->
-      <p class="messages" id="js-messages">non valida qwe qwe qwe qwe </p>
-      <input id="js-registrati" type="button" value="avanti" class="input-submit">
-      </form>
     </div>
 
     <div class="footer">

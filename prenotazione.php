@@ -49,40 +49,40 @@ $hoursTables = HtmlGenerator::hoursTables();
     <link rel="stylesheet" href="./css/prenotazione.css" >
   </head>
   <body>
-    <nav>
-      <a href="https://www.liceobanfi.gov.it/"><img class="logo"  src="resources/logo4.png" /></a>
-      <ul>
-        <li class="ghost"><a></a></li>
-        <li><a class="active" href="https://www.liceobanfi.gov.it/">home</a></li>
-        <li><a href="http://silviasi.it/">SilviaSi</a></li>
-        <li><a href="">informazioni</a></li>
-      </ul>
-    </nav>
-    <div class="page-wrapper cf">
+    <div >
+      <nav>
+        <a href="https://www.liceobanfi.gov.it/"><img class="logo"  src="resources/logo4.png" /></a>
+        <ul>
+          <li class="ghost"><a></a></li>
+          <li><a class="active" href="https://www.liceobanfi.gov.it/">home</a></li>
+          <li><a href="http://silviasi.it/">SilviaSi</a></li>
+          <li><a href="">informazioni</a></li>
+        </ul>
+      </nav>
+        <div class="page-wrapper">
+          <div class="user-table-wrapper">
+            <p><a href="index.php" id="js-back" class="back-bt">indietro</a></p>
+            <h2>le tue prenotazioni</h2>
+          <!-- BEGIN PHP GENERATED OUTPUT -->
+          <?php echo $reservationsTable; ?>
+          <!-- END PHP GENERATED OUTPUT -->
+          </div>
 
-      <div class="user-table-wrapper">
-        <p><a href="index.php" id="js-back" class="back-bt">indietro</a></p>
-        <h2>le tue prenotazioni</h2>
-      <!-- BEGIN PHP GENERATED OUTPUT -->
-      <?php echo $reservationsTable; ?>
-      <!-- END PHP GENERATED OUTPUT -->
-      </div>
+          <div class="days-table-wrapper" id="js-registrable-days">
+            <h2>prenota una data</h2>
+            <div class="days-container half left-small">
+          <!-- BEGIN PHP GENERATED OUTPUT -->
+          <?php echo $daysRadioList ?>
+          <!-- END PHP GENERATED OUTPUT -->
+            </div>
 
-      <div class="days-table-wrapper" id="js-registrable-days">
-        <h2>prenota una data</h2>
-        <div class="days-container half left-small">
-      <!-- BEGIN PHP GENERATED OUTPUT -->
-      <?php echo $daysRadioList ?>
-      <!-- END PHP GENERATED OUTPUT -->
+            <div id="js-hours-tables-container">
+          <!-- BEGIN PHP GENERATED OUTPUT -->
+          <?php echo $hoursTables ?>
+          <!-- END PHP GENERATED OUTPUT -->
+            </div>
+          </div>
         </div>
-
-        <div id="js-hours-tables-container">
-      <!-- BEGIN PHP GENERATED OUTPUT -->
-      <?php echo $hoursTables ?>
-      <!-- END PHP GENERATED OUTPUT -->
-        </div>
-      </div>
-
     </div>
 
     <div class="footer">

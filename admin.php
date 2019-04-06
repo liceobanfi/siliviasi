@@ -28,35 +28,36 @@ $allReservationsTable = HtmlGenerator::allReservationsTable();
     <link rel="stylesheet" href="./css/prenotazione.css" >
   </head>
   <body>
-    <nav>
-      <a href="https://www.liceobanfi.gov.it/"><img class="logo"  src="resources/logo4.png" /></a>
-      <ul>
-        <li class="ghost"><a></a></li>
-        <li><a href="https://www.liceobanfi.gov.it/">home</a></li>
-        <li><a href="http://silviasi.it/">SilviaSi</a></li>
-        <li><a href="">informazioni</a></li>
-      </ul>
-    </nav>
+    <div>
+      <nav>
+        <a href="https://www.liceobanfi.gov.it/"><img class="logo"  src="resources/logo4.png" /></a>
+        <ul>
+          <li class="ghost"><a></a></li>
+          <li><a href="https://www.liceobanfi.gov.it/">home</a></li>
+          <li><a href="http://silviasi.it/">SilviaSi</a></li>
+          <li><a href="">informazioni</a></li>
+        </ul>
+      </nav>
 
-    <div class="page-wrapper">
-      <h1>admin</h1>
-      <h2>lista prenotazioni effettuate</h2>
-      <div class="user-table-wrapper">
-      <!-- BEGIN PHP GENERATED OUTPUT -->
-      <?php echo $allReservationsTable; ?>
-      <!-- END PHP GENERATED OUTPUT -->
+      <div class="page-wrapper">
+        <h1>admin</h1>
+        <h2>lista prenotazioni effettuate</h2>
+        <div class="user-table-wrapper">
+        <!-- BEGIN PHP GENERATED OUTPUT -->
+        <?php echo $allReservationsTable; ?>
+        <!-- END PHP GENERATED OUTPUT -->
+        </div>
       </div>
     </div>
 
-
-<!--    <div class="footer">
+    <div class="footer">
       <p>&copy; 2018-<?php echo date("Y"); ?> Liceo A. Banfi | Pagina realizzata dagli studenti 
 dell'indirizzo scienze applicate nell'ambito del progetto $nomeProgetto<br>
       <a href="https://github.com/liceobanfi/siliviasi">visita il codice</a> | 
       <a href="https://www.liceobanfi.gov.it/note-legali/privacy">privacy</a> |
       <a href="">info</a> </p>
     </div>
--->
+
   </body>
 </html>
 
