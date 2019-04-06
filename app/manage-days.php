@@ -11,7 +11,6 @@
  * giorno string - the day the user wants to subscribe to
  * orario string - the hour the user wants to subscrbe to
  */
-$config = require 'config/config.php';
 $days = require 'config/days-config.php';
 require_once 'classes/ConnectDb.php';
 require_once 'classes/SessionManager.php';
