@@ -1,8 +1,6 @@
 <?php
 
 $config = require 'app/config/config.php';
-$days = require 'app/config/days-config.php';
-require_once 'app/classes/ConnectDb.php';
 require_once 'app/classes/HtmlGenerator.php';
 
 //get the admin id

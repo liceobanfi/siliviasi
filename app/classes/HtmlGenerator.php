@@ -1,5 +1,7 @@
 <?php
 
+require_once dirname(__FILE__).'/../classes/ConnectDb.php';
+$days = require dirname(__FILE__).'/../config/days-config.php';
 /**
  * this is a helper class that contains methods for generating html elements mixed with data
  * @todo: move require_once for the database class here, with a relative path and remove
@@ -29,7 +31,6 @@ class HtmlGenerator {
    * </code>
    */
   public static function allReservationsTable(){
-    global $days;
     //init db connection
     $instance = ConnectDb::getInstance();
     $pdo = $instance->getConnection();
@@ -43,12 +44,14 @@ class HtmlGenerator {
     while ($row = $stmt->fetch()) {
       $tableLength++;
       $tableHtml .=
-      "<tr>
-        <td>" . $row['giorno'] . "</td>
-        <td>" . $row['orario'] . "</td>
-        <td>" . $row['scuola'] . "</td>
-        <td>" . $row['docente'] . "</td>
-      <tr>";
+<<<HTML
+      <tr>
+        <td> {$row['giorno']} </td>
+        <td> {$row['orario']} </td>
+        <td> {$row['scuola']} </td>
+        <td> {$row['docente']} </td>
+      <tr>
+HTML;
     }
 
     if($tableLength === 0)
@@ -57,13 +60,15 @@ class HtmlGenerator {
     }else
     {
       $output =
-      "<table id=\"js-registered-table\">
+<<<HTML
+      <table id="js-registered-table">
       <tr>
         <th> giorno </th>
         <th> orario </th>
         <th> scuola </th>
         <th> docente </th>
-      </tr>". $tableHtml . "</table>";
+      </tr> $tableHtml </table>
+HTML;
     }
     return $output;
   }
@@ -87,7 +92,6 @@ class HtmlGenerator {
    * </code>
    */
   public static function reservationsTable($mail){
-    global $days;
     //init db connection
     $instance = ConnectDb::getInstance();
     $pdo = $instance->getConnection();
@@ -101,11 +105,13 @@ class HtmlGenerator {
     while ($row = $stmt->fetch()) {
       $tableLength++;
       $tableHtml .=
-      "<tr>
-        <td>" . $row['giorno'] . "</td>
-        <td>" . $row['orario'] . "</td>
+<<<HTML
+      <tr>
+        <td>{$row['giorno']}</td>
+        <td>{$row['orario']}</td>
         <td> <button>cancella</button></td>
-      <tr>";
+      <tr>
+HTML;
     }
 
     if($tableLength === 0)
@@ -114,12 +120,14 @@ class HtmlGenerator {
     }else
     {
       $output =
-      "<table id=\"js-registered-table\">
+<<<HTML
+      <table id="js-registered-table">
       <tr>
         <th> giorno </th>
         <th> orario </th>
         <th> opzioni </th>
-      </tr>". $tableHtml . "</table>";
+      </tr> $tableHtml </table>
+HTML;
     }
     return $output;
   }
@@ -147,11 +155,12 @@ class HtmlGenerator {
         $checked = 'checked="checked"';
         $isFirstKey = false;
       }
-      $output .= '
-      <label class="control control--radio">' . $day . '
-        <input type="radio" name="radio" value="' . $day . '" ' . $checked . '/>
+      $output .= <<<HTML
+      <label class="control control--radio">$day
+        <input type="radio" name="radio" value="$day" $checked />
         <div class="control__indicator"></div>
-      </label>';
+      </label>
+HTML;
     }
     return $output;
   }
@@ -199,17 +208,19 @@ class HtmlGenerator {
         $isFirstKey = false;
         $hidden = "";
       }
-      $output .= "<table data-day=\"$day\" class=\" $hidden hours-container half right-big\">";
+      $output .= <<<HTML
+      <table data-day="$day" class=" $hidden hours-container half right-big">
+HTML;
       foreach($hours as $hour => $free)
       {
         $class = $free ? "free" : "taken";
         $button = $free ? "<button>prenota</button>" : "";
-        $output .= "
-        <tr class=\"$class\">
+        $output .= <<<HTML
+        <tr class="$class">
         <td>$hour</td>
         <td>$button</td> 
-        </tr>";
-
+        </tr>
+HTML;
       }
       $output .= '</table>';
     }
