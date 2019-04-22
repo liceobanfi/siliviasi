@@ -1,15 +1,16 @@
 <?php
 
 /**
- * singleton class to manage the database connection
- * @example - here is an inline example:
- * <code>
- * <?php
- *  //instantiate the class
- *  $instance = ConnectDb::getInstance();
- *  // get the gonnection
- *  $conn = $instance->getConnection();
- * </code>
+ * database connection
+ * @description singleton class to manage the database connection
+ * @example here is an inline example:
+ *          <code>
+ *          <?php
+ *          //instantiate the class
+ *          $instance = ConnectDb::getInstance();
+ *          //get the connection
+ *          $conn = $instance->getConnection();
+ *          </code>
  */
 class ConnectDb {
   // Hold the class instance.
@@ -38,7 +39,8 @@ class ConnectDb {
   }
 
   /**
-   * constructor. Call this method to istantiate the class
+   * public constructor
+   * @description call this method to istantiate the singleton class
    * @return object - the singleton object
    */
   public static function getInstance() {
